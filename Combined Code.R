@@ -65,4 +65,8 @@ processed_data$Street.2  <- gsub("Road|road","Rd.", processed_data$Street.2)
 processed_data$Street.2  <- gsub("Street","St.", processed_data$Street.2)
 processed_data$Street.2  <- gsub("Avenue","Ave.", processed_data$Street.2)
 head(processed_data)
-
+library(dplyr)
+dirty <- read.csv("/Users/ming/Desktop/dirty_data.csv")
+dirty
+myData <- select(dirty,-Strange.HTML)
+myData
